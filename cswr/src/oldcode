@@ -1,0 +1,17 @@
+testAxios(){
+         
+              let api = 'http://172.28.34.27/otcs/cs.exe/api/v1/nodes/724891/output'   
+              console.log(this.token)
+              axios({
+                method : 'get',
+                url: api,
+                headers: {
+                "otcsticket" : this.token.ticket
+                      }
+                  }).then(function (response){
+                    console.log(response.data)
+                  }).catch( function(response){
+                    console.log(response)
+                  }) 
+              
+            }
